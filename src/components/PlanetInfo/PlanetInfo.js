@@ -1,11 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import styles from './PlanetInfo.module.scss';
+import { usePlanet } from '../../contexts/modules/planet';
 
 import svgInfoSeparator from '../../assets/images/svg/info-separator.svg';
 
 function PlanetInfo() {
-  const planet = useSelector(state => state.planet.currentPlanet);
+  const planet = usePlanet().state.currentPlanet;
 
   return (
     <div className={styles['planet-info']}>
